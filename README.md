@@ -1,7 +1,7 @@
 # Midterm-Exam-2
 
-Name:
+Name: Amar
 
-Surname:
+Surname: Bećaj
 
-Index #:
+Index #: 17/074e

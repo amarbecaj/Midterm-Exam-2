@@ -12,13 +12,23 @@
 ===================================================
 """
 
-# Write your function here
-
-
 
 def main():
-    # Test your function here
-    pass
+    def recur_sum(n):
+
+        if n <= 1:
+            return n
+        else:
+            return n + recur_sum(n - 1)
+
+    num = int(input("Upisite broj: "))
+
+    if num < 0:
+        print("Unesite pozitivan broj: ")
+    else:
+        print("Suma je: ", recur_sum(num))
 
 if __name__ == "__main__":
     main()
+
+

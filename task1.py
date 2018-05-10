@@ -23,13 +23,27 @@
 ===================================================
 """
 
-# Write your functions here
 
+inp = input('Unesite rijec koju zelite da kodirate:\n')
+inp = inp.lower()
 
+key = int(input('Unesite broj(2-25):\n'))
+def rot13(input,key):
+    if key > 25:
+        key = 25
+    elif key < 2:
+        key = 2
+    finaltext = ''
+    for slovo in input:
+        if slovo.isalpha():
+            num = ord(slovo)
+            if (num + key) > 122:
+                x = (num + key) - 122
+                finaltext += chr(x + ord('a') - 1)
+            elif((num + key <= 122)):
+                finaltext += chr(num + key)
+        else:
+            finaltext += slovo
+    print(finaltext)
 
-def main():
-    # Test your functions here
-    pass
-
-if __name__ == "__main__":
-    main()
+rot13(inp,key)
